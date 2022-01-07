@@ -5,15 +5,18 @@ const buildFolder = './dist';// продакшн билд
 const srcFolder = './src';// исходный код
 
 export const path = {
-    build: {
+    build: {// файлы продакшена
+        css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         files: `${buildFolder}/files/`,
     },
-    src: {
+    src: { //файды- исходники
+        scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`, // /**/ - проверка в любых вложенных папках
     },
-    watch: {
+    watch: { //за какими файлаим мы булем наблюдать
+        scss: `${srcFolder}/scss/**/*.scss`,
         html:`${srcFolder}/**/*.html`,
         files: `${srcFolder}/files/**/*.*`,
     },
