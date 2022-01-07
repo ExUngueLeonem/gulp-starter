@@ -30,4 +30,5 @@ export const html = () => {
             })
         )
         .pipe(app.gulp.dest(app.path.build.html))//куда мы копируем файлы
-}
+        .pipe(app.plugins.browsersync.stream());// в браузер
+    }
