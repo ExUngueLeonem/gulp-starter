@@ -9,10 +9,13 @@ export const path = {
         js: `${buildFolder}/js/`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
+        images: `${buildFolder}/img/`,
         files: `${buildFolder}/files/`,
     },
     src: { //файлы- исходники
         js: `${srcFolder}/js/app.js`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        svg: `${srcFolder}/img/**/*.svg`,
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`, // /**/ - проверка в любых вложенных папках
@@ -21,6 +24,7 @@ export const path = {
         js: `${srcFolder}/js/**/*.js`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html:`${srcFolder}/**/*.html`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
         files: `${srcFolder}/files/**/*.*`,
     },
     clean: buildFolder,
