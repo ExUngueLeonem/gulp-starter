@@ -6,16 +6,19 @@ const srcFolder = './src';// исходный код
 
 export const path = {
     build: {// файлы продакшена
+        js: `${buildFolder}/js/`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         files: `${buildFolder}/files/`,
     },
-    src: { //файды- исходники
+    src: { //файлы- исходники
+        js: `${srcFolder}/js/app.js`,
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`, // /**/ - проверка в любых вложенных папках
     },
     watch: { //за какими файлаим мы булем наблюдать
+        js: `${srcFolder}/js/**/*.js`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html:`${srcFolder}/**/*.html`,
         files: `${srcFolder}/files/**/*.*`,
