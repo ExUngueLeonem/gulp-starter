@@ -1,6 +1,11 @@
+@import "fonts";
+
 body {
     background: url('@img/impuls.png') 0 0 repeat;
     
+	font-family: BriosoPro Italic;
+    font-size: 50px;
+
     span{
         color: red;
     }

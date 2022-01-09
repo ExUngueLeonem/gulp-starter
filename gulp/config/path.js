@@ -20,6 +20,7 @@ export const path = {
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`, // /**/ - проверка в любых вложенных папках
+        svgicons: `${srcFolder}/svgicons/*.svg`,
     },
     watch: { //за какими файлаим мы булем наблюдать
         js: `${srcFolder}/js/**/*.js`,
