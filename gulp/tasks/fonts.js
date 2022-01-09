@@ -1,6 +1,6 @@
 import fs from 'fs';
 import fonter from 'gulp-fonter';
-import ttf2woff2 from 'gulp-ttf2woff';
+import ttf2woff2 from 'gulp-ttf2woff2';
 
 export const otfToTtf = () => {
     //ищем файлы шрифтов
@@ -13,12 +13,12 @@ export const otfToTtf = () => {
         )
         //Конвертируем в .ttf
         .pipe(fonter({
-            formats: ["ttf"]
+            formats: ['ttf']
         }))
         //Выгружаем в исходную папку
         .pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
 }
-export const ttfWolf = () => {
+export const ttfToWoff = () => {
     //Ищем файлы шрифтов
     return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, {})
         .pipe(app.plugins.plumber(
@@ -47,7 +47,7 @@ export const fontsStyle = () => {
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
             //Проверяем существует ли файл стилей для подключения шрифтов
-            if (!fs.existsSync(fontFiles)) {
+            if (!fs.existsSync(fontsFiles)) {
                 //Если файла нет, создаем его
                 fs.writeFile(fontsFile, '', cb);
                 let newFileOnly;
@@ -77,22 +77,19 @@ export const fontsStyle = () => {
                             fontWeigth = 400;
                         }
                         fs.appendFile(fontsFile,
-                            `@font-face {
-                                font-family: ${fontName};
-                                font-display: swap;
-                                src: url("../fonts/${fontFileName}.woff2") format('woff2'), url("../fonts/${fontFileName}.woff") format('woff');
-                                font-weigth: ${fontWeigth};
-                                font-style: normal;
-                            } /r/n`, cb);
-                        //@font-face {...}
+                            `@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weigth: ${fontWeigth};\n\tfont-style: normal;\n}\r\n`, cb);
                         newFileOnly = fontFileName;
                     }
-
-
                 }
+
+            } else {
+                //если файл есть, вывводим сообщение
+                console.log("Файл scss/fonts.scss уже существует. Для обновления файла его нужно удалить");
             }
         }
-    })
+    });
+    return app.gulp.src(`${app.path.srcFolder}`);
+    function cb() { }
 }
 
 
