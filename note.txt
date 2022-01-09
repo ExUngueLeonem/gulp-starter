@@ -3,6 +3,7 @@
 npm run dev
 npm run svgSprives //формирует svg Sprite
 если мы хотим обновить шрифты, то удаляем из dist папку fonts
+npm run build
 
 
 Семён Кудрявцев
