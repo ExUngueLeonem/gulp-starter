@@ -4,18 +4,24 @@
 @import "libs";
 @import "global";
 
-
-/* 
-body {
-    font-family: BriosoPro Italic;
-    font-size: 50px;
-
-    span {
-        color: red;
-    }
+a:hover {
+	color: $hover-color;
 }
 
-.wrapper {
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        height: 40px;
+    }
+    &__item {
+        font-size: 13px;
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 768px) {
@@ -29,4 +35,3 @@ body {
         background-color: green;
     }
 }
- */

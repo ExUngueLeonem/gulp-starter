@@ -1,6 +1,12 @@
 html,
 body {
 	height: 100%;
+
+	font-size: 1em;
+	line-height: 1.65714286em;
+	font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+	color: #565656;
+	font-weight: 400;
 }
 
 .wrapper {
@@ -16,13 +22,9 @@ body {
 	flex: 0 0 auto;
 }
 
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
-
-
-
-
 

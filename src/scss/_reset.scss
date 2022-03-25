@@ -48,6 +48,15 @@ select {
   font: inherit;
 }
 
-a{
+a {
   text-decoration: none;
+  background:transparent;
+  &:link, &:visited {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
