@@ -1,15 +1,21 @@
 @import "fonts";
+@import "vars";
+@import "reset";
+@import "libs";
+@import "global";
 
+
+/* 
 body {
-    background: url('@img/impuls.png') 0 0 repeat;
-    
-	font-family: BriosoPro Italic;
+    font-family: BriosoPro Italic;
     font-size: 50px;
 
-    span{
+    span {
         color: red;
     }
+}
 
+.wrapper {
 }
 
 @media (max-width: 768px) {
@@ -23,3 +29,4 @@ body {
         background-color: green;
     }
 }
+ */
